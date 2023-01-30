@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css-intro.css">
+    <script src="css-intro.js"></script>
+</head>
+
+<body>
+    <p class = "Choose"><b>Choose:</b></p>
+    <p class = "Text"><b>Opponents Choice:</b></p>
+    <p class = "Choice"><b>Choice:</b></p>
+    
+    <section>
+        <img src="img/rock.png" onclick = "RockPaperScissors(0)" class = "ii"/>
+        <img src="img/paper.png" onclick = "RockPaperScissors(1)" class = "ii"/>
+        <img src="img/scissors.jpg" onclick = "RockPaperScissors(2)" class = "ii"/>
+    </section>
+    <div class = "div" id = "rock">
+        <img src="img/rock.png"/>
+    </div>
+    <div class = "div" id = "paper">
+        <img src="img/paper.png"/>
+    </div>
+    <div class = "div" id = "scissors">
+        <img src="img/scissors.jpg"/>
+    </div>
+    <div class = "div2" id = "myrock">
+        <img src="img/rock.png"/>
+    </div>
+    <div class = "div2" id = "mypaper">
+        <img src="img/paper.png"/>
+    </div>
+    <div class = "div2" id = "myscissors">
+        <img src="img/scissors.jpg"/>
+    </div>
+    <section id = "winner">
+        <span id = "win">You Win!</span>
+        <span id = "lose">You Lose!</span>
+        <span id = "tie">TIE!</span>
+    </section>
+    <p id = "score"><b>score:</b></p>
+    <p id = "scores"><span id = "display1">0</span> - <span id = "display2">0</span></p>
+
+</body>
+
+</html>

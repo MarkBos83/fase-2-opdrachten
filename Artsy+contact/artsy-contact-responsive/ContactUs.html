@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=DynaPuff' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="ContactUs.css">
+</head>
+
+<body>
+    <header>
+        <nav class="flex-container__header">
+            <div class="flex-child__header dyna logo">
+                Artsy
+            </div>
+            <div class="flex-child__header info">
+                <a href="/about/">About us</a>
+                <a href="/art/">Art gallery</a>
+                <a href="/sell/">Sell yours</a>
+            </div>
+            <div class="flex-child__header contact">
+                <a href="ContactUs.html"><button>Contact</button></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <nav class='main'>
+                <div>
+                    <h1>Contact Us</h1>
+                </div>
+                <div class="flex-container__main">
+                    <div class="flex-child__main getInTouch">
+                        <h3>Let's get in touch</h3>
+                        <div>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                        <ul class="list">
+                            <li>Amsterdam, Grotegracht 12</li>
+                            <li>info@artsy.nl</li>
+                            <li>010-1234567</li>
+                        </ul>
+                    </div>
+                    <div class="flex-child__main form">
+                        <div class="sendMessage">Send us a message</div>
+                        <form action="">
+                            <div class="grid">
+                                <div class="grid-item1">
+                                    <label for="first name" class="grid-item">First name</label><br>
+                                    <input id="first-name" type="text" placeholder="first name" required>
+                                </div>
+                                <div class="grid-item2">
+                                    <label for="last name" class="grid-item">Last name</label><br>
+                                    <input id="last-name" type="text" placeholder="last name" required>
+                                </div>
+                                <div class="grid-item3">
+                                    <label for="age" class="grid-item">Age</label><br>
+                                    <input id="age" type="number" placeholder="age">
+                                </div>
+                                <div class="grid-item4">
+                                    <label for="email" class="grid-item">Email</label><br>
+                                    <input id="email" type="text" placeholder="email" required>
+                                </div>
+                                <div class="grid-item5">
+                                    <label for="phone" class="grid-item">Phone</label><br>
+                                    <input id="phone" type="text" placeholder="phonenumber">
+                                </div>
+                                <div class="grid-item6">
+                                    <label for="message" class="grid-item">Message</label><br>
+                                    <textarea name="message" id="message" cols="85" rows="5"
+                                        placeholder="your message..." required></textarea>
+                                </div>
+                                <div class="submit"><button type="submit" onclick="thanks()">Submit</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </main>
+    <footer>
+        <nav class="flex-container__footer">
+            <div class="flex-child__footer">
+                <div class="flex-child__footer__left">
+                    <div class="logo logo__footer">
+                        Artsy
+                    </div>
+                    <p>Happy paintings nascetur ridiculus mus. <br> Donec quam felis.</p>
+                </div>
+            </div>
+            <div class="flex-child__footer">
+                <div class="flex-child__footer__right">
+                    <a href="">about us</a>
+                    <a href="">art gallery</a>
+                    <a href="">sell your art</a>
+                    <a href="">contact</a>
+                </div>
+            </div>
+        </nav>
+    </footer>
+    <script>
+        function thanks(){
+            const x = document.getElementById("first-name").value;
+            const y = document.getElementById("last-name").value;
+            const z = document.getElementById("message").value;
+            const v = document.getElementById("email").value;
+            if (x !="" && y!="" && z!="" && v!=""){
+                alert("Thanks for sending in the form")
+            }
+        }
+    </script>
+</body>
+
+</html>

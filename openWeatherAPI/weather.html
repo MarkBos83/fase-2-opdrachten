@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <form action="">
+                <div>
+                    <label for="select-city">city:</label>
+                    <select name="select-city" id="select-city" onchange="getTodaysWeather()">
+                        <option value="Amersfoort">Amersfoort</option>
+                        <option value="Amsterdam">Amsterdam</option>
+                        <option value="London">London</option>
+                        <option value="Morgantown">Morgantown</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="temperature">temperature in:</label>
+                    <select name="temperature" id="temperature" onchange="getTodaysWeather()">
+                        <option value="℃">℃</option>
+                        <option value="°F">°F</option>
+                        <option value="K">K</option>
+                    </select>
+                </div>
+            </form>
+            <div id="weatherToday">
+
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function addCitys() {
+
+        }
+        getTodaysWeather()
+        function getTodaysWeather() {
+            cityname = document.getElementById("select-city").value
+            temperature = document.getElementById("temperature").value
+            if(temperature === '℃'){
+                tempSystem = "&units=metric"
+            } else if(temperature === '°F'){
+                tempSystem = "&units=imperial"
+            } else if(temperature === 'K'){
+                tempSystem = ""
+            }
+            const xhttp = new XMLHttpRequest()
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState === XMLHttpRequest.DONE) {
+                    if (xhttp.status === 'OK' || (xhttp.status >= 200 && xhttp.status < 400)) {
+                        let contentDB = JSON.parse(xhttp.responseText)
+                        todaysWeather =
+                            `
+                            <div class = "">
+                                <h3>${contentDB.name}</h3>
+                                <p>${contentDB.weather[0].description}</p>
+                                <p>${contentDB.main.temp} ${temperature}</p>
+                            </div>
+                            `
+                        document.getElementById("weatherToday").innerHTML = todaysWeather
+                    }
+                }
+            }
+            xhttp.open("GET", `https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=4331ad3abec2897daac932016a06e628${tempSystem}`)
+            xhttp.send()
+        }
+        function getWeather() {
+
+        }
+    </script>
+</body>
+
+</html>

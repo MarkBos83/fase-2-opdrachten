@@ -1,0 +1,75 @@
+.div{
+    visibility: hidden;
+    position: fixed;
+    right: 50px;
+    top: 101.6px;
+}
+.div2{
+    visibility: hidden;
+    position: fixed;
+    right: 500px;
+    top: 101.6px;
+}
+img{
+    position: relative;
+    top: 15px;
+    height: 200px;
+    width: 200px;
+    border: black 2px solid;
+    transition: 0.05s;
+}
+.ii:hover{
+    transform: scale(1.1);
+    cursor:pointer;
+}
+.Text{
+    font-size: xx-large;
+    position:fixed;
+    top:0px;
+    right: 10px;
+}
+.Choice{
+    font-size: xx-large;
+    position:fixed;
+    top:0px;
+    right: 550px;
+}
+.Choose {
+    font-size: xx-large;
+}
+#winner{
+    font-size: 5em;
+}
+#win{
+    color: rgb(33, 221, 33);
+    visibility: hidden;
+    position: fixed;
+    top:400px;
+    left: 35vw;
+}
+#lose{
+    color: red;
+    visibility: hidden;
+    position: fixed;
+    top:400px;
+    left: 35vw;
+}
+#tie{
+    color: purple;
+    visibility: hidden;
+    position: fixed;
+    top:400px;
+    left: 40vw;
+}
+#score {
+    font-size: xx-large;
+    position: fixed;
+    top:500px;
+    left: 43vw;
+}
+#scores {
+    font-size: xx-large;
+    position: fixed;
+    top:550px;
+    left: 43vw;
+}
